@@ -53,9 +53,17 @@ return packer.startup(function(use)
   -- GruvBox Theme
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
-  -- Vim-airline for tabs
-  use 'vim-airline/vim-airline'
-
+  -- Vim-airline for tabs , Now we are using a lua alternative for this
+  -- use 'vim-airline/vim-airline' 
+  
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
   -- Code Completion
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -71,6 +79,25 @@ return packer.startup(function(use)
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
   }
+
+  -- emmet for Web Development
+  use "mattn/emmet-vim"
+
+  -- Colorizer for showing colors when using HexCode and other things
+   use {
+    "norcalli/nvim-colorizer.lua",
+    config=function() require'colorizer'.setup() end
+   }
+
+  -- Telescope Fuzzy finder
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  -- LSP
+ -- use "hrsh7th/cmp-nvim-lsp" -- code Completion for LSP
+ -- use "neovim/nvim-lspconfig" -- enable LSP
+ -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

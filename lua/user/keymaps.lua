@@ -89,4 +89,17 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Open terminal in split 
-keymap("n", "<leader>c", ":8sp <bar> term<cr>", opts)
+keymap("n", "<leader>s", ":w <bar> 8sp <bar> term<cr>", opts)
+
+-- For emmet
+-- Here I've used vim mappings for emmet
+-- New keymappings for Emmet
+vim.cmd "let g:user_emmet_mode='n' "  --Only enable in normal mode function
+vim.cmd "let g:user_emmet_leader_key=',' "
+
+-- Enable Emmet only while using html and CSS
+vim.cmd "let g:user_emmet_install_global = 0"
+vim.cmd "autocmd FileType html,css EmmetInstall"
+
+-- Telescope Keybindings
+keymap("n","<leader>f",":Telescope find_files<cr>",opts)
