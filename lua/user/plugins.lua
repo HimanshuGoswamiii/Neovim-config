@@ -48,14 +48,16 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
+  --              THEMES
   -- Chris at Machine colorschemes
-  use "lunarvim/colorschemes"
+  use {"lunarvim/colorschemes",opt=true} -- Lazy Loading 
+  -- To use these themees first :PackerLoad colorschemes
+
   -- GruvBox Theme
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
   -- Vim-airline for tabs , Now we are using a lua alternative for this
   -- use 'vim-airline/vim-airline' 
-  
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -74,6 +76,13 @@ return packer.startup(function(use)
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine (Important for completion)
 
+  -- LSP
+  use "hrsh7th/cmp-nvim-lsp" -- code Completion for LSP
+  use "hrsh7th/cmp-nvim-lua"
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+ 
+
   -- TreeSitter
   use {
       'nvim-treesitter/nvim-treesitter',
@@ -81,7 +90,7 @@ return packer.startup(function(use)
   }
 
   -- emmet for Web Development
-  use "mattn/emmet-vim"
+  use {"mattn/emmet-vim",ft={'html','css','js'}} -- Only load it during these files
 
   -- Colorizer for showing colors when using HexCode and other things
    use {
@@ -94,10 +103,9 @@ return packer.startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  -- LSP
- -- use "hrsh7th/cmp-nvim-lsp" -- code Completion for LSP
- -- use "neovim/nvim-lspconfig" -- enable LSP
- -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  
+  -- R Programming in Neovim
+  use {'jalvesaq/Nvim-R',branch='stable',ft={'r','R','Rnw','Rmd','Rd','Rrst'} }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
