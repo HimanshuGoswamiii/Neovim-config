@@ -50,21 +50,22 @@ return packer.startup(function(use)
 
   --              THEMES
   -- Chris at Machine colorschemes
-  use {"lunarvim/colorschemes",opt=true} -- Lazy Loading 
+  use {"lunarvim/colorschemes",opt=true} -- Lazy Loading
   -- To use these themees first :PackerLoad colorschemes
 
   -- GruvBox Theme
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
   -- Vim-airline for tabs , Now we are using a lua alternative for this
-  -- use 'vim-airline/vim-airline' 
+  -- use 'vim-airline/vim-airline'
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    requires = { 'kyazdani42/nvim-web-devicons', opt=true}
   }
+  -- BufWinEnter : After a Buffer is displayed in a window
   use {
     'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
+    requires = {'kyazdani42/nvim-web-devicons'}, event='BufWinEnter'
   }
   -- Code Completion
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -81,7 +82,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lua"
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
- 
+
 
   -- TreeSitter
   use {
@@ -101,11 +102,14 @@ return packer.startup(function(use)
   -- Telescope Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { {'nvim-lua/plenary.nvim'} },
+    cmd="Telescope"
   }
-  
+
   -- R Programming in Neovim
-  use {'jalvesaq/Nvim-R',branch='stable',ft={'r','R','Rnw','Rmd','Rd','Rrst'} }
+  use {'jalvesaq/Nvim-R',branch='stable',ft={'r','R','Rnw','Rmd','rmd','Rd','Rrst'} }
+  --use {'gaalcaras/ncm-R',ft={'r','R','Rnw','Rmd','Rd','Rrst'} }
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
