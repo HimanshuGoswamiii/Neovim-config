@@ -10,4 +10,5 @@ require "user.nvimR"
 -- require "user.barbar-config"
 require "user.lsp"  -- Notice here we are using directory name
 -- If we use directory name then it'll automatically look for init.lua file in that directory
+require "user.netrw"
 

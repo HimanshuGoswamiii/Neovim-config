@@ -48,7 +48,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
-  --              THEMES
+  --             THEMES
   -- Chris at Machine colorschemes
   use {"lunarvim/colorschemes",opt=true} -- Lazy Loading
   -- To use these themees first :PackerLoad colorschemes
@@ -67,6 +67,15 @@ return packer.startup(function(use)
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}, event='BufWinEnter'
   }
+
+  -- Comments in Neovim
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
+
   -- Code Completion
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -104,6 +113,12 @@ return packer.startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} },
     cmd="Telescope"
+  }
+
+  -- nnn File Explorer
+  use {
+    "luukvbaal/nnn.nvim",
+    config = function() require("nnn").setup() end
   }
 
   -- R Programming in Neovim

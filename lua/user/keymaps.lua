@@ -91,6 +91,9 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Open terminal in split 
 keymap("n", "<leader>s", ":w <bar> 8sp <bar> term<cr>", opts)
 
+-- nnn File Explorer
+keymap("n","<leader>n",":NnnExplorer<cr>",opts)
+
 --                   For emmet
 -- Here I've used vim mappings for emmet
 -- New keymappings for Emmet
