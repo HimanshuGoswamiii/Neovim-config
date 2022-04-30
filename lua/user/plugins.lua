@@ -48,10 +48,12 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
+  use "akinsho/toggleterm.nvim" -- Terminal integration 
+
   --             THEMES
   -- Chris at Machine colorschemes
   use {"lunarvim/colorschemes",opt=true} -- Lazy Loading
-  -- To use these themees first :PackerLoad colorschemes
+  -- To use these themes first :PackerLoad colorschemes
 
   -- GruvBox Theme
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
@@ -86,6 +88,7 @@ return packer.startup(function(use)
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine (Important for completion)
+  --use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
   use "hrsh7th/cmp-nvim-lsp" -- code Completion for LSP

@@ -8,7 +8,8 @@ if not snip_status_ok then
   return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip/loaders/from_vscode").lazy_load() -- this will work if you installed  rafamadriz/friendly-snippets plugin
+require("luasnip/loaders/from_vscode").load({ paths = { "~/.config/nvim/mysnippets/" } }) -- Load snippets from my-snippets folder
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
