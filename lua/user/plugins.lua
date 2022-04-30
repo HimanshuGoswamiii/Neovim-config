@@ -55,6 +55,7 @@ return packer.startup(function(use)
 
   -- GruvBox Theme
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  use 'tanvirtin/monokai.nvim'
 
   -- Vim-airline for tabs , Now we are using a lua alternative for this
   -- use 'vim-airline/vim-airline'
@@ -99,9 +100,6 @@ return packer.startup(function(use)
       run = ':TSUpdate'
   }
 
-  -- emmet for Web Development
-  use {"mattn/emmet-vim",ft={'html','css','js'}} -- Only load it during these files
-
   -- Colorizer for showing colors when using HexCode and other things
    use {
     "norcalli/nvim-colorizer.lua",
@@ -121,9 +119,20 @@ return packer.startup(function(use)
     config = function() require("nnn").setup() end
   }
 
+  -- Autopairs
+  use{
+    "windwp/nvim-autopairs"
+  }
+
+  -- +----------------------------------------------------
+  -- plugins related to different languages
+
+  -- emmet for Web Development
+  use {"mattn/emmet-vim",ft={'html','css','js'}} -- Only load it during these files
+
+
   -- R Programming in Neovim
-  use {'jalvesaq/Nvim-R',branch='stable',ft={'r','R','Rnw','Rmd','rmd','Rd','Rrst'} }
-  --use {'gaalcaras/ncm-R',ft={'r','R','Rnw','Rmd','Rd','Rrst'} }
+  -- use {'jalvesaq/Nvim-R',branch='stable',ft={'r','R','Rnw','Rmd','rmd','Rd','Rrst'} }
 
 
   -- Automatically set up your configuration after cloning packer.nvim

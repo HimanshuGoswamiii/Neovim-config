@@ -6,9 +6,11 @@ require "user.plugins"
 require "user.cmp"
 require "user.treesitter"
 require "user.lualine-config"
-require "user.nvimR"
+--require "user.nvimR"
+require "user.autopairs"
 -- require "user.barbar-config"
 require "user.lsp"  -- Notice here we are using directory name
 -- If we use directory name then it'll automatically look for init.lua file in that directory
-require "user.netrw"
+
+-- require "user.netrw"  --Using nnn as file explorer now
 
