@@ -100,7 +100,7 @@
   "Main function template": {
     "prefix": "main",
     "body": [
-      "int main ()",
+      "int main (int argc, char *argv[])",
       "{",
       "\t$0",
       "\treturn 0;",
@@ -264,6 +264,22 @@
       "free($2);"
     ],
     "description": "Allocates memory to a pointer variable using calloc(), then deallocates using free()."
+  },
+  "Linked list template": {
+    "prefix": "linkedList",
+    "body": [
+      "struct Node {",
+      "\tint data;",
+      "\tstruct Node* next;",
+      "};",
+      "int main ()",
+      "{",
+      "\t$0",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "A standard main function for a C program"
   }
+
 }
 

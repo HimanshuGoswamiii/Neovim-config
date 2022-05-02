@@ -49,6 +49,9 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
   use "akinsho/toggleterm.nvim" -- Terminal integration 
+  use "lukas-reineke/indent-blankline.nvim" -- Indentation
+  use "windwp/nvim-autopairs" -- For autopairs
+  use "goolord/alpha-nvim"  -- we don't need the function because we're defining our alpha.lua
 
   --             THEMES
   -- Chris at Machine colorschemes
@@ -122,10 +125,6 @@ return packer.startup(function(use)
     config = function() require("nnn").setup() end
   }
 
-  -- Autopairs
-  use{
-    "windwp/nvim-autopairs"
-  }
 
   -- +----------------------------------------------------
   -- plugins related to different languages
