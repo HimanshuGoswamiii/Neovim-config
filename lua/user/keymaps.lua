@@ -107,3 +107,4 @@ vim.cmd "let g:user_emmet_leader_key=',' "
 
 -- Telescope Keybindings
 keymap("n","<leader>f",":Telescope find_files<cr>",opts)
+keymap("n","<leader>fo",":Telescope oldfiles<cr>",opts)
