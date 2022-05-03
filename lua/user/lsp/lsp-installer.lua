@@ -3,9 +3,31 @@ if not status_ok then
 	return
 end
 
--- Register a handler that will be called for all installed servers.
--- Alternatively, you may also register handlers on specific server instances instead (see example below).
-lsp_installer.on_server_ready(function(server)
+local lspconfig = require("lspconfig")
+
+-- servers installed on my devices : When you install a sever add this to this list
+local servers = { "jsonls", "sumneko_lua","pyright","clangd","html" }
+
+lsp_installer.setup {
+	ensure_installed = servers
+}
+
+for _, server in pairs(servers) do
+	local opts = {
+		on_attach = require("user.lsp.handlers").on_attach,
+		capabilities = require("user.lsp.handlers").capabilities,
+	}
+	local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
+	if has_custom_opts then
+	 	opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
+	end
+	lspconfig[server].setup(opts)
+end
+
+
+--          DEPRECATED: lsp_installer.on_server_ready() 
+-- ------------------------------------------------------------------------------------
+--[[ lsp_installer.on_server_ready(function(server)
 	local opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,
@@ -30,4 +52,4 @@ lsp_installer.on_server_ready(function(server)
 	-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 	server:setup(opts)
 end)
-
+]]

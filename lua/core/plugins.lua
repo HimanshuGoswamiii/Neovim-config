@@ -58,7 +58,6 @@ return packer.startup(function(use)
   use {"lunarvim/colorschemes",opt=true} -- Lazy Loading
   -- To use these themes first :PackerLoad colorschemes
 
-  -- GruvBox Theme
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use 'tanvirtin/monokai.nvim'
 
