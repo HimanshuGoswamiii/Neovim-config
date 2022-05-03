@@ -37,5 +37,10 @@ vim.cmd "autocmd Filetype lua setlocal tabstop=2 shiftwidth=2 expandtab"
 vim.cmd "autocmd Filetype json setlocal ts=2 sw=2 expandtab"
 -- Here i've declared that thesefiletypes should have these settings for indent, tabs
 
+vim.cmd "autocmd Filetype * set fo-=cro" -- Here fo: formatoptions
+-- This disables automatic comments in all filetypes 
+-- r: Comment on Enter, o : using o or Shift O to insert line , c: Autowrap comments using textwidth
+
 -- +---       NOTES -------
 -- We can use either vim.opt. or vim.o.
+-- au is an alias for autocmd

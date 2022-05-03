@@ -6,7 +6,7 @@ end
 local lspconfig = require("lspconfig")
 
 -- servers installed on my devices : When you install a sever add this to this list
-local servers = { "jsonls", "sumneko_lua","pyright","clangd","html" }
+local servers = { "jsonls", "sumneko_lua","pyright","clangd","html","bashls" }
 
 lsp_installer.setup {
 	ensure_installed = servers
