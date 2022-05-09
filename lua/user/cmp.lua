@@ -71,7 +71,8 @@ cmp.setup {
         cmp.select_next_item()
       elseif luasnip.expandable() then
         luasnip.expand()
-      elseif luasnip.expand_or_jumpable() then
+      -- elseif luasnip.expand_or_jumpable() then   -- Causing Tab problems
+      elseif luasnip.expand_or_locally_jumpable() then -- :h luasnip for checking the difference b/w two
         luasnip.expand_or_jump()
       elseif check_backspace() then
         fallback()
@@ -131,5 +132,15 @@ cmp.setup {
     ghost_text = false,
     native_menu = false,
   },
+  -- Disable cmp in comments
+  enabled = function()
+    local in_prompt = vim.api.nvim_buf_get_option(0, 'buftype') == 'prompt'
+    if in_prompt then  -- this will disable cmp in the Telescope window (taken from the default config)
+      return false
+    end
+    local context = require("cmp.config.context")
+    return not(context.in_treesitter_capture("comment") == true or context.in_syntax_group("Comment"))
+  end
+
 }
 

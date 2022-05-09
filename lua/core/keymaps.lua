@@ -71,7 +71,7 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 -- When you select something to replace, default vim saves that selected as new copy. We have changed that
-keymap("v", "p", '"_dP', opts)
+--keymap("v", "p", '"_dP', opts)  -- Creates problem when pasting from another buffer
 
 -- -----------------------------------------------------------------------------
 -- Visual Block --
