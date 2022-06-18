@@ -48,7 +48,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
-  use "akinsho/toggleterm.nvim" -- Terminal integration 
+  use "akinsho/toggleterm.nvim" -- Terminal integration
   use "lukas-reineke/indent-blankline.nvim" -- Indentation
   use "windwp/nvim-autopairs" -- For autopairs
   use "goolord/alpha-nvim"  -- we don't need the function because we're defining our alpha.lua
@@ -124,8 +124,8 @@ return packer.startup(function(use)
     config = function() require("nnn").setup() end
   }
 
--- TODO 
-  use {
+-- TODO
+  --[[ use {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
     config = function()
@@ -135,7 +135,7 @@ return packer.startup(function(use)
         -- refer to the configuration section below
       }
     end
-  }
+  } ]]
 
 
   -- +----------------------------------------------------
@@ -143,6 +143,9 @@ return packer.startup(function(use)
 
   -- emmet for Web Development
   use {"mattn/emmet-vim",ft={'html','css','js'}} -- Only load it during these files
+
+  -- Java
+  use 'mfussenegger/nvim-jdtls' -- Before installing this install jdtls server
 
 
   -- R Programming in Neovim
