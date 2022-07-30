@@ -20,7 +20,7 @@ vim.opt.timeoutlen = 1000                       -- time to wait for a mapped seq
 vim.opt.undofile = true                         -- enable persistent undo
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
 vim.opt.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-vim.o.expandtab = true                        -- convert tabs to spaces 
+vim.o.expandtab = true                        -- convert tabs to spaces
 vim.o.shiftwidth = 4                          -- the number of spaces inserted for each indentation
 vim.o.tabstop = 4                             -- insert 4 spaces for a tab
 vim.o.cursorline = true                       -- highlight the current line
@@ -38,7 +38,7 @@ vim.cmd "autocmd Filetype json setlocal ts=2 sw=2 expandtab"
 -- Here i've declared that thesefiletypes should have these settings for indent, tabs
 
 vim.cmd "autocmd Filetype * set fo-=cro" -- Here fo: formatoptions
--- This disables automatic comments in all filetypes 
+-- This disables automatic comments in all filetypes
 -- r: Comment on Enter, o : using o or Shift O to insert line , c: Autowrap comments using textwidth
 
 -- +---       NOTES -------

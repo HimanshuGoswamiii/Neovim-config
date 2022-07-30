@@ -158,12 +158,12 @@
   },
   "cout": {
     "prefix": "cout",
-    "body": ["std::cout << \"${1:message}\" << std::endl;"],
+    "body": ["cout << \"${1:message}\" << endl;"],
     "description": "Code snippet for printing to std::cout, provided the header is set"
   },
   "cin": {
     "prefix": "cin",
-    "body": ["std::cin >> $1;"],
+    "body": ["cin >> $1;"],
     "description": "Code snippet for std::cin, provided the header is set"
   },
   "printf": {
@@ -214,7 +214,7 @@
   "Main function template": {
     "prefix": "main",
     "body": [
-      "int main (int argc, char *argv[])",
+      "int main ()",
       "{",
       "\t$1",
       "\treturn 0;",

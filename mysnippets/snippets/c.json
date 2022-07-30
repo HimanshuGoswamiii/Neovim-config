@@ -100,7 +100,7 @@
   "Main function template": {
     "prefix": "main",
     "body": [
-      "int main (int argc, char *argv[])",
+      "int main ()",
       "{",
       "\t$0",
       "\treturn 0;",
