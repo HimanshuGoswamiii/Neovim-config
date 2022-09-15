@@ -158,7 +158,7 @@
   },
   "cout": {
     "prefix": "cout",
-    "body": ["cout << \"${1:message}\" << endl;"],
+    "body": ["cout << ${1:message} << endl;"],
     "description": "Code snippet for printing to std::cout, provided the header is set"
   },
   "cin": {
