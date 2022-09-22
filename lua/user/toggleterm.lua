@@ -47,6 +47,12 @@ function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
 
+-- Compile C code automatically : lua _RUN_CODE()
+local runcode = Terminal:new({cmd = "gcc --version"})
+function _RUN_CODE()
+  runcode:toggle()
+end
+
 -- For node
 local node = Terminal:new({ cmd = "node", hidden = true })
 function _NODE_TOGGLE()

@@ -93,7 +93,8 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>s", ":w <bar> 8sp <bar> term<cr>", opts)
 
 -- nnn File Explorer
-keymap("n","<leader>n",":NnnExplorer %:p:h<cr>",opts) -- To always open nnn in the directory of the currently active buffer, use %:p:h as argument
+-- keymap("n","<leader>n",":NnnExplorer %:p:h<cr>",opts) -- To always open nnn in the directory of the currently active buffer, use %:p:h as argument
+keymap("n","<leader>n",":NnnPicker %:p:h<cr>",opts) -- To always open nnn in the directory of the currently active buffer, use %:p:h as argument
 
 --                   For emmet
 -- Here I've used vim mappings for emmet
@@ -109,3 +110,7 @@ vim.cmd "let g:user_emmet_leader_key=',' "
 -- Telescope Keybindings
 keymap("n","<leader>f",":Telescope find_files<cr>",opts)
 keymap("n","<leader>fo",":Telescope oldfiles<cr>",opts)
+
+-- Compile and Run Code
+-- keymap("n","<F9>",":TermExec cmd='gcc % && ./a.out'<cr>",opts)
+-- Now it's in ftplugin for filetype languages

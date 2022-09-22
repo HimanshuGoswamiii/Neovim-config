@@ -18,4 +18,3 @@ require "user.lsp"  -- Notice here we are using directory name
 --   NOT USED NOW
 -- require "user.nvimR"
 -- require "user.netrw"  --Using nnn as file explorer now
-

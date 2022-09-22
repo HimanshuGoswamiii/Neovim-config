@@ -69,6 +69,9 @@ return packer.startup(function(use)
     -- requires = { 'kyazdani42/nvim-web-devicons', opt=true}
     requires = { 'kyazdani42/nvim-web-devicons'}
   }
+  -- using packer.nvim
+  -- use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+
   -- BufWinEnter : After a Buffer is displayed in a window
   use {
     'romgrk/barbar.nvim',
@@ -147,7 +150,8 @@ return packer.startup(function(use)
   use {"mattn/emmet-vim",ft={'html','css','js'}} -- Only load it during these files
 
   -- Java
-  use {"mfussenegger/nvim-jdtls",ft={'java'}} -- Before installing this install jdtls server
+  -- use {"mfussenegger/nvim-jdtls",ft={'java'}} -- Before installing this install jdtls server
+  use {"mfussenegger/nvim-jdtls"} -- Before installing this install jdtls server
 
   -- Competitive Programming : Needed by firefox plugin : Competitive-Companion
   use {"p00f/cphelper.nvim"}
