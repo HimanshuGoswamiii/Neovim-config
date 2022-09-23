@@ -23,18 +23,19 @@ vim.opt.writebackup = false                     -- if a file is being edited by 
 vim.o.expandtab = true                        -- convert tabs to spaces
 vim.o.shiftwidth = 4                          -- the number of spaces inserted for each indentation
 vim.o.tabstop = 4                             -- insert 4 spaces for a tab
-vim.o.cursorline = true                       -- highlight the current line
 vim.o.number = true                           -- set numbered lines
-vim.o.relativenumber = true                  -- set relative numbered lines
 vim.o.numberwidth = 4                         -- set number column width to 2 {default 4}
 vim.o.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
-vim.o.wrap = false                            -- display lines as one long line
 vim.o.scrolloff = 4                           -- is one of my fav
 vim.o.sidescrolloff = 8
 -- vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
+vim.o.wrap = false                            -- display lines as one long line
+vim.o.cursorline = false                       -- highlight the current line
+vim.o.relativenumber = false                  -- set relative numbered lines
 
-vim.cmd "autocmd Filetype lua setlocal tabstop=2 shiftwidth=2 expandtab"
-vim.cmd "autocmd Filetype json setlocal ts=2 sw=2 expandtab"
+--- Using ftplugin folder for Filetype command
+-- vim.cmd "autocmd Filetype lua setlocal tabstop=2 shiftwidth=2 expandtab"
+-- vim.cmd "autocmd Filetype json setlocal ts=2 sw=2 expandtab"
 -- Here i've declared that thesefiletypes should have these settings for indent, tabs
 
 vim.cmd "autocmd Filetype * set fo-=cro" -- Here fo: formatoptions

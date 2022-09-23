@@ -5,9 +5,11 @@ require "core.colorscheme"
 require "core.plugins"
 
 -- Configurations of plugins / lsp
+require "user.filetype-config"
 require "user.cmp"
 require "user.treesitter"
 require "user.lualine-config"
+require "user.bufferline-config"
 require "user.toggleterm"
 require "user.alpha"
 --require "user.nnn"

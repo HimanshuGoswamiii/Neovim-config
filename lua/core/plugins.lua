@@ -42,14 +42,14 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
+  --            MY PLUGINS HERE
   use "wbthomason/packer.nvim" -- Have packer manage itself
   -- So many plugins relies on the two plugins below
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
   use "akinsho/toggleterm.nvim" -- Terminal integration
-  use "lukas-reineke/indent-blankline.nvim" -- Indentation
+  use "lukas-reineke/indent-blankline.nvim" -- Indentation guides
   use "windwp/nvim-autopairs" -- For autopairs
   use "goolord/alpha-nvim"  -- we don't need the function because we're defining our alpha.lua
 
@@ -57,33 +57,31 @@ return packer.startup(function(use)
   -- Chris at Machine colorschemes
   use {"lunarvim/colorschemes",opt=true} -- Lazy Loading
   -- To use these themes first :PackerLoad colorschemes
-
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use 'tanvirtin/monokai.nvim'
   -- use "lunarvim/synthwave84.nvim"
 
-  -- Vim-airline for tabs , Now we are using a lua alternative for this
-  -- use 'vim-airline/vim-airline'
+
+  --          TABLINE AND STATUSLINE
   use {
     'nvim-lualine/lualine.nvim',
     -- requires = { 'kyazdani42/nvim-web-devicons', opt=true}
     requires = { 'kyazdani42/nvim-web-devicons'}
   }
-  -- using packer.nvim
-  -- use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
   -- BufWinEnter : After a Buffer is displayed in a window
-  use {
+  --[[ use {
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}, event='BufWinEnter'
-  }
+  } ]]
 
   -- Comments in Neovim
   use {
-      'numToStr/Comment.nvim',
-      config = function()
-          require('Comment').setup()
-      end
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
   }
 
   -- Code Completion
@@ -129,6 +127,12 @@ return packer.startup(function(use)
     config = function() require("nnn").setup() end
   }
 
+    use {"chentoast/marks.nvim",
+    config = function ()
+        require('marks').setup()
+    end
+    }
+
 -- TODO
   --[[ use {
     "folke/todo-comments.nvim",
@@ -144,7 +148,7 @@ return packer.startup(function(use)
 
 
   -- +----------------------------------------------------
-  -- plugins related to different languages
+  --        plugins related to different languages
 
   -- emmet for Web Development
   use {"mattn/emmet-vim",ft={'html','css','js'}} -- Only load it during these files

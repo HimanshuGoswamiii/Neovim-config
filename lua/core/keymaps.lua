@@ -55,9 +55,11 @@ keymap("n", "t", ":tabn<CR>", opts)
 keymap("n", "T", ":tabp<CR>", opts)
 keymap("n", "<leader>t", ":tabedit ", opts)
 
+-- marks
+keymap("n","<leader>m",":MarksListBuf<CR>",opts)
 
--- Insert --
--- Press jk fast to enter
+--          INSERT MODE KEYBINDINGS --
+-- Press kj fast to enter
 keymap("i", "kj", "<ESC>", opts)
 
 -- ------------------------------------------------------------------------------
@@ -89,7 +91,7 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Open terminal in split 
+-- Open terminal in split
 keymap("n", "<leader>s", ":w <bar> 8sp <bar> term<cr>", opts)
 
 -- nnn File Explorer
