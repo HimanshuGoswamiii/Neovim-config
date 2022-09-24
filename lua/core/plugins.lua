@@ -158,7 +158,7 @@ return packer.startup(function(use)
   use {"mfussenegger/nvim-jdtls"} -- Before installing this install jdtls server
 
   -- Competitive Programming : Needed by firefox plugin : Competitive-Companion
-  use {"p00f/cphelper.nvim"}
+  -- use {"p00f/cphelper.nvim"}
 
 
   -- R Programming in Neovim
