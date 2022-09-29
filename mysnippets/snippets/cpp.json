@@ -221,5 +221,19 @@
       "}"
     ],
     "description": "A standard main function for a C++ program"
+  },
+  "Boilerplate":{
+    "prefix" : "boil",
+    "body": [
+      "#include <iostream>",
+      "$1",
+      "using namespace std;",
+      "int main ()",
+      "{",
+      "\t$2",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "A Boilerplate for all my C++ programs"
   }
 }
