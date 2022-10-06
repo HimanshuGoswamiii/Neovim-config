@@ -5,7 +5,7 @@ require "core.colorscheme"
 require "core.plugins"
 
 -- Configurations of plugins / lsp
-require "user.filetype-config"
+-- require "user.filetype-config" -- It's by default now in Neovim 0.8
 require "user.cmp"
 require "user.treesitter"
 require "user.lualine-config"
