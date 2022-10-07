@@ -149,6 +149,7 @@ return packer.startup(function(use)
 
   -- +----------------------------------------------------
   --        plugins related to different languages
+  use {'hkupty/iron.nvim'} -- REPL over neovim
 
   -- emmet for Web Development
   use {"mattn/emmet-vim",ft={'html','css','js'}} -- Only load it during these files
