@@ -7,22 +7,21 @@ iron.setup {
     scratch_repl = true,
     -- Your repl definitions come here
     repl_definition = {
-      sh = {
-        command = {"zsh"}
-      }
+        sh = {command = {"zsh"}},
+        python = {command = {"python"}} -- Open python instead of Ipython if both are installed
     },
     -- How the repl window will be displayed
     -- See below for more information
     -- repl_open_cmd = require('iron.view').bottom(40),
 
-    repl_open_cmd = "vertical botright 60 split"
+    repl_open_cmd = "vertical botright 80 split"
     -- One can always use the default commands from vim directly
   },
   -- Iron doesn't set keymaps by default anymore.
   -- You can set them here or manually add keymaps to the functions in iron.core
   keymaps = {
     send_motion = "<space>sc",
-    visual_send = "<space>sc",
+    visual_send = "<space>sv",
     send_file = "<space>sf",
     send_line = "<space>sl",
     send_mark = "<space>sm",

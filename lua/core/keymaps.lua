@@ -92,7 +92,7 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Open terminal in split
-keymap("n", "<leader>s", ":w <bar> 8sp <bar> term<cr>", opts)
+-- keymap("n", "<leader>s", ":w <bar> 8sp <bar> term<cr>", opts)
 
 -- nnn File Explorer
 -- keymap("n","<leader>n",":NnnExplorer %:p:h<cr>",opts) -- To always open nnn in the directory of the currently active buffer, use %:p:h as argument
