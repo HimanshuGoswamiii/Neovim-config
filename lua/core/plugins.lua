@@ -156,7 +156,7 @@ return packer.startup(function(use)
 
   -- Java
   -- use {"mfussenegger/nvim-jdtls",ft={'java'}} -- Before installing this install jdtls server
-  use {"mfussenegger/nvim-jdtls"} -- Before installing this install jdtls server
+  -- use {"mfussenegger/nvim-jdtls"} -- Before installing this install jdtls server
 
   -- Competitive Programming : Needed by firefox plugin : Competitive-Companion
   -- use {"p00f/cphelper.nvim"}

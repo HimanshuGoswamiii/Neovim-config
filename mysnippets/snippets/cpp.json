@@ -19,12 +19,12 @@
   },
   "do": {
     "prefix": "do",
-    "body": ["do", "{", "\t$1", "} while($2);"],
+    "body": ["do{","\t$1", "} while($2);"],
     "description": "Code snippet for do...while loop"
   },
   "while": {
     "prefix": "while",
-    "body": ["while ($1)", "{", "\t$2", "}"],
+    "body": ["while ($1){","\t$2", "}"],
     "description": ""
   },
   "foreach": {
@@ -227,7 +227,10 @@
     "body": [
       "#include <iostream>",
       "$1",
-      "using namespace std;",
+      "using std::cout;",
+      "using std::cin;",
+      "using std::endl;",
+      "",
       "int main ()",
       "{",
       "\t$2",
@@ -235,5 +238,19 @@
       "}"
     ],
     "description": "A Boilerplate for all my C++ programs"
+  },
+
+  "printArray":{
+    "prefix" : "boilArr",
+    "body" : [
+      "void printArray(int Arr[], int len){",
+          "\tfor (int i = 0; i < len; i++) {",
+                "\t\tcout << Arr[i] << ' ';",
+          "\t}",
+          "\tcout << endl;",
+      "}"
+    ],
+    "description" : "A Boilerplate for Printing the Array"
   }
+
 }
