@@ -55,7 +55,7 @@ return packer.startup(function(use)
 
   --             THEMES
   -- Chris at Machine colorschemes
-  use {"lunarvim/colorschemes",opt=true} -- Lazy Loading
+  -- use {"lunarvim/colorschemes",opt=true} -- Lazy Loading
   -- To use these themes first :PackerLoad colorschemes
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use 'tanvirtin/monokai.nvim'
@@ -65,16 +65,10 @@ return packer.startup(function(use)
   --          TABLINE AND STATUSLINE
   use {
     'nvim-lualine/lualine.nvim',
-    -- requires = { 'kyazdani42/nvim-web-devicons', opt=true}
     requires = { 'kyazdani42/nvim-web-devicons'}
   }
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
-  -- BufWinEnter : After a Buffer is displayed in a window
-  --[[ use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}, event='BufWinEnter'
-  } ]]
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
   -- Comments in Neovim
   use {
@@ -98,8 +92,13 @@ return packer.startup(function(use)
   -- LSP
   use "hrsh7th/cmp-nvim-lsp" -- code Completion for LSP
   use "hrsh7th/cmp-nvim-lua"
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- use "neovim/nvim-lspconfig" -- enable LSP
+  use {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+  }
+  -- use "williamboman/nvim-lsp-installer" -- Use mason.nvim now
 
 
   -- TreeSitter
@@ -133,33 +132,20 @@ return packer.startup(function(use)
     end
     }
 
--- TODO
-  --[[ use {
-    "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-      require("todo-comments").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
-  } ]]
-
 
   -- +----------------------------------------------------
   --        plugins related to different languages
-  use {'hkupty/iron.nvim'} -- REPL over neovim
+  -- use {'hkupty/iron.nvim'} -- REPL over neovim
+    -- Check it's name : Vigemus/iron.nvim
 
   -- emmet for Web Development
-  use {"mattn/emmet-vim",ft={'html','css','js'}} -- Only load it during these files
+  use {"mattn/emmet-vim",ft={'html','css','js','htmldjango'}} -- Only load it during these files
 
   -- Java
-  -- use {"mfussenegger/nvim-jdtls",ft={'java'}} -- Before installing this install jdtls server
   -- use {"mfussenegger/nvim-jdtls"} -- Before installing this install jdtls server
 
-  -- Competitive Programming : Needed by firefox plugin : Competitive-Companion
-  -- use {"p00f/cphelper.nvim"}
+  -- COMPETITIVE PROGRAMMING : Needed by firefox plugin : Competitive-Companion
+  use {"p00f/cphelper.nvim"}
 
 
   -- R Programming in Neovim

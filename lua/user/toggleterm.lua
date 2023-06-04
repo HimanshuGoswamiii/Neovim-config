@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-	size = 20, -- 20: for direction : float
+	size = 60, -- Previous config = 20: for direction : float
 	open_mapping = [[<C-\>]],
 	hide_numbers = true,
 	shade_filetypes = {},
@@ -13,7 +13,7 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
-	direction = "float", -- options : horizontal,vertical,float
+	direction = "vertical", -- options : horizontal,vertical,float
 	close_on_exit = true,
 	shell = vim.o.shell,
 	float_opts = {

@@ -12,7 +12,7 @@ vim.opt.pumheight = 10                          -- pop up menu height
 vim.opt.showmode = false                         -- we don't need to see things like -- INSERT -- anymore
 vim.opt.showtabline = 2                         -- always show tabs
 vim.opt.smartcase = true                        -- smart case
-vim.opt.smartindent = true                      -- make indenting smarter again
+vim.opt.smartindent = false                      -- this causes indentation in files that shouldn't have indentation like in .txt, .l
 vim.opt.splitbelow = true                       -- force all horizontal splits to go below current window
 vim.opt.splitright = true                       -- force all vertical splits to go to the right of current window
 vim.opt.swapfile = false                        -- creates a swapfile
@@ -30,7 +30,7 @@ vim.o.scrolloff = 4                           -- is one of my fav
 vim.o.sidescrolloff = 8
 -- vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 vim.o.wrap = false                            -- display lines as one long line
-vim.o.cursorline = false                       -- highlight the current line
+vim.o.cursorline = true                       -- highlight the current line
 vim.o.relativenumber = false                  -- set relative numbered lines
 
 --- Using ftplugin folder for Filetype command

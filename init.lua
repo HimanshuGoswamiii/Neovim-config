@@ -12,7 +12,7 @@ require "user.lualine-config"
 require "user.bufferline-config"
 require "user.toggleterm"
 require "user.alpha"
-require "user.iron-nvim"
+-- require "user.iron-nvim"
 --require "user.nnn"
 require "user.autopairs"
 require "user.lsp"  -- Notice here we are using directory name

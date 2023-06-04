@@ -48,7 +48,7 @@ keymap("n", "<A-h>", ":bprevious<CR>", opts)
 keymap("n", "H", "^", opts)
 keymap("n", "L", "$", opts)
 keymap("n", "^", "H", opts)
-keymap("n", "$", "L", opts)
+-- keymap("n", "$", "L", opts)
 
 -- Tabs
 keymap("n", "t", ":tabn<CR>", opts)
@@ -95,8 +95,8 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- keymap("n", "<leader>s", ":w <bar> 8sp <bar> term<cr>", opts)
 
 -- nnn File Explorer
--- keymap("n","<leader>n",":NnnExplorer %:p:h<cr>",opts) -- To always open nnn in the directory of the currently active buffer, use %:p:h as argument
-keymap("n","<leader>n",":NnnPicker %:p:h<cr>",opts) -- To always open nnn in the directory of the currently active buffer, use %:p:h as argument
+keymap("n","<leader>n",":NnnExplorer %:p:h<cr>",opts) -- To always open nnn in the directory of the currently active buffer, use %:p:h as argument
+keymap("n","<leader>N",":NnnPicker %:p:h<cr>",opts) -- To always open nnn in the directory of the currently active buffer, use %:p:h as argument
 
 --                   For emmet
 -- Here I've used vim mappings for emmet

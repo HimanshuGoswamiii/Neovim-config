@@ -226,10 +226,9 @@
     "prefix" : "boil",
     "body": [
       "#include <iostream>",
+      "#include <vector>",
       "$1",
-      "using std::cout;",
-      "using std::cin;",
-      "using std::endl;",
+      "using namespace std;",
       "",
       "int main ()",
       "{",
@@ -239,18 +238,52 @@
     ],
     "description": "A Boilerplate for all my C++ programs"
   },
+  "Codeforces template":{
+    "prefix" : "codeforces",
+    "body" : [
+      "#include <iostream>",
+      "#include <vector>",
+      "$1",
+      "using namespace std;",
+      "int main ()",
+      "{",
+      "\tint T;",
+      "\tcin >> T;",
+      "\twhile(T--){",
+      "\t\t$2",
+      "\t}",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "Template for Codeforces"
+  },
 
   "printArray":{
     "prefix" : "boilArr",
     "body" : [
-      "void printArray(int Arr[], int len){",
+      "void printArray(int Arr[], int len)",
+        "{",
           "\tfor (int i = 0; i < len; i++) {",
-                "\t\tcout << Arr[i] << ' ';",
+            "\t\tcout << Arr[i] << ' ';",
           "\t}",
           "\tcout << endl;",
       "}"
     ],
     "description" : "A Boilerplate for Printing the Array"
+  },
+
+  "printVector":{
+    "prefix" : "boilVect",
+    "body" : [
+      "void printVector(vector<int> vec)",
+      "{",
+        "\tfor (int x : vec){",
+          "\t\tcout << x << ' ';",
+        "\t}",
+        "\tcout << endl;",
+      "}"
+    ],
+    "description" : "A Boilerplate for Printing the vector"
   }
 
 }

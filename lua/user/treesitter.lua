@@ -9,5 +9,5 @@ configs.setup {
     additional_vim_regex_highlighting = true,
 
   },
-  indent = { enable = true, disable = {"python", "yaml","json" } }, -- I was having some problems with indent
+  indent = { enable = true, disable = {"l", "html", "css", "javascript", "python", "yaml","json" } }, -- I was having some problems with indent
 }
