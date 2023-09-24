@@ -8,7 +8,7 @@
 sudo pacman -S npm
 ```
 
-Required for installation of language-servers:
+npm is required for installation of language-servers like:
 - bashls 
 - html 
 - jsonls 
