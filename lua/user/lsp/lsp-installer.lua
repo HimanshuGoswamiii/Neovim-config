@@ -11,7 +11,7 @@ require("mason").setup({
 local lspconfig = require("lspconfig")
 
 -- servers installed on my devices : When you install a sever add this to this list
-local servers = { "jsonls", "lua_ls","pyright","clangd","html","cssls","bashls","marksman" }
+local servers = { "jsonls", "lua_ls", "pyright", "clangd", "html", "cssls", "bashls", "marksman" }
 lsp_installer.setup {
 	ensure_installed = servers
 }

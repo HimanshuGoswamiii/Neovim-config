@@ -38,7 +38,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "himanshugoswami.netlify.com"
+	return "himanshugoswami.netlify.app"
 end
 
 --dashboard.section.footer.val = footer()  -- Uncomment this to get your website in the footer

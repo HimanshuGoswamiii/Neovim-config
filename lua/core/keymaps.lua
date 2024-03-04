@@ -44,10 +44,12 @@ keymap("n", "<A-l>", ":bnext<CR>", opts)
 keymap("n", "<A-h>", ":bprevious<CR>", opts)
 -- A stands for Alt
 
--- Jump to start and End of Line
-keymap("n", "H", "^", opts)
-keymap("n", "L", "$", opts)
-keymap("n", "^", "H", opts)
+-- Goto : Jump to start and End of Line
+keymap("n", "gs", "^", opts) --  Go to : first non-blank in line
+keymap("n", "gh", "0", opts) --  Go to : start of the line
+keymap("n", "gl", "$", opts) 
+keymap("n", "ge", "G", opts) 
+-- keymap("n", "^", "H", opts)
 -- keymap("n", "$", "L", opts)
 
 -- Tabs
@@ -110,7 +112,7 @@ vim.cmd "let g:user_emmet_leader_key=',' "
 -- NOTE: No need for these commands because now I'll load emmet only during these files
 
 -- Telescope Keybindings
-keymap("n","<leader>f",":Telescope find_files<cr>",opts)
+keymap("n","<leader>ff",":Telescope find_files<cr>",opts)
 keymap("n","<leader>fo",":Telescope oldfiles<cr>",opts)
 
 -- Compile and Run Code

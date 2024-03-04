@@ -57,7 +57,7 @@ return packer.startup(function(use)
   -- Chris at Machine colorschemes
   -- use {"lunarvim/colorschemes",opt=true} -- Lazy Loading
   -- To use these themes first :PackerLoad colorschemes
-  use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  -- use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use 'tanvirtin/monokai.nvim'
   -- use "lunarvim/synthwave84.nvim"
 
